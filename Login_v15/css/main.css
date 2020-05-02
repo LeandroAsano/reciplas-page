@@ -178,7 +178,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #ebeeef;
+  background-image: url('/Imgs/green-wallpaper-5.jpg');
 }
 
 
@@ -246,7 +246,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 43px 88px 93px 190px;
+  padding: 43px 88px 93px 90px;
 }
 
 
@@ -280,10 +280,11 @@ iframe {
   color: #555555;
   line-height: 1.2;
 
+  text-align: center;
   display: block;
   width: 100%;
   background: transparent;
-  padding: 0 5px;
+  padding: 0 50px;
 }
 
 .focus-input100 {
@@ -396,14 +397,17 @@ input.input100 {
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
-  display: flex;
+  position: absolute;
+  top: 410px;
+  left: 260px;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
-  min-width: 160px;
+  padding: 0 50px;
+  min-width: 60px;
   height: 50px;
   background-color: #57b846;
   border-radius: 25px;
+  
 
   font-family: Poppins-Regular;
   font-size: 16px;
