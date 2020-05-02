@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arimo&family=Poppins&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+    background-image: url('/Imgs/green-wallpaper-5.jpg');
+}
+
+/* Navbar */
+  /* Menu Icon */
+#check{
+  display: none;
+}
+
+#check:checked ~ label #btn{
+  left: 140px;
+  opacity: 0;
+}
+
+#check:checked ~ label #cancel{
+  left: 20px;
+}
+
+label #btn, label #cancel{
+  position: absolute;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px 10px;
+  color: white;
+  background-color: rgba(31, 218, 46, 0.61);
+  font-size: 30px;
+}
+ 
+label #btn{
+  left: 20px;
+  top: 18px;
+  transition: all .5s;
+}
+
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 18px;
+  color: white;
+  transition: all .5s ease;
+}
+  /* navbar */
+#mainNavbar{
+  background-color: rgba(14, 80, 17, 0.74);
+  font-family: 'Anton', sans-serif;
+}
+
+#mainNavbar a{
+  color: rgb(247, 242, 242);
+  font-size: 30px;
+}
+
+#mainNavbar a:hover{
+  color: rgb(255, 255, 255);
+}
+
+#mainNavbar a:link{
+  text-decoration: none;
+}
+
+/* Sidebar */
+div.wrapper div#sidebar-expanded{
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  transition: all .5s;
+}
+
+#sidebar-hide{
+  position: fixed;
+  width: 70px;
+  height: 100%;
+  background: rgb(41, 40, 40);
+}
+
+.sidebar{
+  font-family: 'Poppins', sans-serif;
+}
+
+#sidebar-expanded img{
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+
+/* sidebar-hide user img */
+#sidebar-hide img{
+  position: absolute;
+  margin-top: 20px;
+  margin-bottom: 23px;
+  margin-left: 10px;
+}
+
+.sidebar h2{
+  color: #fff;
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.sidebar p{
+  position: absolute;
+  color: #fff;
+  margin-left: 82px;
+  top: 57px;
+}
+
+#sidebar-hide ul{
+  margin-top: 93px;
+}
+
+.sidebar a:link{
+  text-decoration: none;
+}
+
+.sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(225,225,225,0.05);
+  margin-left: 10px;
+}
+
+.sidebar ul li:hover{
+  background-color: rgb(41, 41, 41);
+}
+
+.sidebar ul li a{
+  color: rgb(177, 177, 177);
+}
+
+.sidebar ul li i{
+  margin-right: 10px;
+}
+
+#sidebar-expanded ul li a:hover{
+  color: rgb(255, 253, 253);
+  padding: 10px;
+  transition: all .2s;
+}
+
+.sidebar ul li a .fas i{
+  width: 25px;
+}
