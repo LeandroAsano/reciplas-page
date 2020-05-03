@@ -52,11 +52,6 @@ label #cancel{
   color: white;
   transition: all .5s ease;
 }
-
-#navbar-options{
-  left: 1400px;
-}
-
   /* navbar */
 #mainNavbar{
   background-color: rgba(14, 80, 17, 0.74);
@@ -149,6 +144,10 @@ div.wrapper div#sidebar-expanded{
 
 .sidebar ul li i{
   margin-right: 10px;
+}
+
+.sidebar ul li .selected{
+  color: rgb(32, 172, 27);
 }
 
 #sidebar-expanded ul li a:hover{
