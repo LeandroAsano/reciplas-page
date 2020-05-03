@@ -9,7 +9,7 @@ function loginUser() {
     case "Produccion":
       loginButton.setAttribute("href", "/view/Produccion/Home.html");
       break;
-    case "Produccion":
+    case "Administracion":
       loginButton.setAttribute("href", "/view/Administracion/Home.html");
       break;
   }
