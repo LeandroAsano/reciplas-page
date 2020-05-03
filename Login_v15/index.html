@@ -26,6 +26,7 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
 </head>
 <body>
 	
@@ -41,8 +42,8 @@
 				<form class="login100-form validate-form">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						
-						<input class="input100" type="text" name="usuario" placeholder="Ingresar usuario">
-						<span class="focus-input100"></span>
+						<input id="usuarioInput" class="input100" type="text" name="usuario" placeholder="Ingresar usuario">
+						<span id="usuarioSpan" class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
@@ -66,7 +67,7 @@
 						</div>
 					</div>
 
-					<a class="login100-form-btn" href="/view/Ventas/Home.html">
+					<a id="loginButton" onmouseover="loginUser()" class="login100-form-btn" href="#">
 						Login
 					</a>
 			
@@ -74,7 +75,9 @@
 			</div>
 		</div>
 	</div>
-	
+
+<!--===============================================================================================-->	g
+	<script type="text/javascript" src="/scripts/Login.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -91,6 +94,7 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+<!--===============================================================================================-->
+	
 </body>
 </html>
