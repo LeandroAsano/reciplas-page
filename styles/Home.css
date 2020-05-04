@@ -73,7 +73,7 @@ label #cancel{
 
 /* Sidebar */
 div.wrapper div#sidebar-expanded{
-  position: fixed;
+  position: absolute;
   left: -250px;
   width: 250px;
   height: 100%;
@@ -81,7 +81,7 @@ div.wrapper div#sidebar-expanded{
 }
 
 #sidebar-hide{
-  position: fixed;
+  position: absolute;
   width: 70px;
   height: 100%;
   background: rgb(41, 40, 40);
