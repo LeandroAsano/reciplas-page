@@ -11,7 +11,7 @@
 }
 
 body {
-    background-image: url('/Imgs/green-wallpaper-5.jpg');
+    background-image: url('../Imgs/green-wallpaper-5.jpg');
 }
 
 /* Navbar */
@@ -73,17 +73,19 @@ label #cancel{
 
 /* Sidebar */
 div.wrapper div#sidebar-expanded{
+  z-index: 4;
   position: absolute;
   left: -250px;
   width: 250px;
-  height: 100%;
+  height: 130%;
   transition: all .5s;
 }
 
 #sidebar-hide{
+  z-index: 5;
   position: absolute;
   width: 70px;
-  height: 100%;
+  height: 130%;
   background: rgb(41, 40, 40);
 }
 
@@ -147,7 +149,7 @@ div.wrapper div#sidebar-expanded{
 }
 
 .sidebar ul li .selected{
-  color: rgb(32, 172, 27);
+  color: rgb(113, 214, 109);
 }
 
 #sidebar-expanded ul li a:hover{
