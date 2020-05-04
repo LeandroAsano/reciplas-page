@@ -50,9 +50,13 @@
         <p>Producción</p>
         <ul>
           <li>
-            <a onclick="selectTab(this)" class="tab noSelected new nuevoProducto" href="#"
+            <a onclick="selectTab(this)" class="tab selected new nuevoProducto" href="#"
               ><i class="fas fa-cart-plus"></i> Ingresar Producto</a
             >
+          </li>
+          <li>
+            <a onclick="selectTab(this)" class="tab noSelected mat nuevaMateria" href="#"
+              ><i class="fas fa-puzzle-piece"></i>Ingresar Materia</a>
           </li>
           <li>
             <a onclick="selectTab(this)" class="tab noSelected add agregarStock" href="#"
@@ -95,8 +99,12 @@
         />
         <ul>
           <li>
-            <a onclick="selectItem(this)" class="tab noSelected new nuevoProducto" href="#"
+            <a onclick="selectItem(this)" class="tab selected new nuevoProducto" href="#"
               ><i class="fas fa-cart-plus"></i></a>
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="tab noSelected mat nuevaMateria" href="#"
+              ><i class="fas fa-puzzle-piece"></i></a>
           </li>
           <li>
             <a onclick="selectItem(this)" class="tab noSelected add agregarStock" href="#"
@@ -161,6 +169,34 @@
         </div>
       </div>
 
+      <!--NUEVA MATERIA-->
+      <div id="nuevaMateria" class="card-body">
+        <h1>INGRESAR NUEVA MATERIA PRIMA</h1>
+        <div style="width: 100%; height: 100px; float: left;">
+          <form>
+            <div class="form-row" style="margin-left: 250px;">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4" class="text-center" >NOMBRE MATERIA</label>
+                <input type="email" class="form-control" id="inputNombre" placeholder="Nombre...">
+              </div>
+
+              <div class="form-group col-md-2" style="margin-left: 65px;">
+                <label for="inputCity" class="text-center" style="margin-left: 0px; width: 200px;">CANTIDAD (Kgrs)</label>
+                <input type="text" class="form-control" style="margin-left: 10px" id="inputCity" placeholder="xxx">
+              </div>
+              
+            </div>
+            <div class="form-group text-center">
+              <label for="inputAddress">DESCRIPCIÓN</label>
+              <textarea class="form-control" placeholder="Descripcion aquí..." style="width: 60%; margin-left: 255px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success col-md-2" style="margin-left: 400px; margin-top: 30px;">Agregar</button>
+            <button type="submit" class="btn btn-success col-md-2" style="margin-left: 50px;margin-top: 30px;">Limpiar</button>
+            
+          </form>
+        </div>
+
+      </div>
       <!--AGREGAR STOCK-->
 
       <div id="agregarStock" class="card-body">
@@ -199,7 +235,7 @@
 <!--CONSULTAR STOCK-->
 <div id="consultarStock">
   <!--Search-->
-<h1 style="margin-top: -30px; margin-bottom: -30px; ">PRODUCTOS</h1>
+<h1 style="margin-top: 25px; margin-bottom: -30px; ">PRODUCTOS</h1>
 <form class="form-row" id="searchBox">
   <div id="searchIconCont">
     <button class="btn btn-success" id="searchButton">
