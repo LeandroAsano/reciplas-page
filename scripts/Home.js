@@ -25,51 +25,52 @@ function hideBar() {
   //sidebarUserImg.style.left = "15px";
 }
 
-function selectItem(element) {
+function deselectIcons() {
   var allIcons = document.getElementsByClassName("selected");
 
-  if(allIcons.length>0){
+  if (allIcons.length > 0) {
     for (var i = 0; i < 2; i++) {
       var activeIconClass = allIcons[0].className;
-    
+
       iconClass = activeIconClass.replace("selected", "noSelected");
       allIcons[0].className = iconClass;
     }
   }
+}
 
+/* SELECT BOTH ICONS FROM SIDEBAR */
+function selectIcon(element) {
   var icons = document.getElementsByClassName(element.className);
-
+  
   for (var i = 0; i < 2; i++) {
     var iconClass = icons[0].className;
-  
+
     iconClass = iconClass.replace("noSelected", "selected");
     icons[0].className = iconClass;
   }
-
 }
 
-/**
- * function showSideBar() {
-  var chk = document.getElementById("check");
-  var sidebarOpen = document.getElementById("sidebar-expanded");
-  var sidebarHide = document.getElementById("sidebar-hide");
-  var sidebarUserImg = document.getElementById("hideUserImg");
+function hideTabs() {
+  var tabs = document.getElementsByClassName("tab");
 
-  sidebarUserImg.style.transition = "all .5s";
+  for (var i = 0; i < (tabs.length/2); i++) {
+    var tabId = getLastWord(tabs[i].className);
+    var tabDiv = document.getElementById(tabId);
 
-  //expanded
-  if (chk.checked == true) {
-    sidebarOpen.style.left = "0px";
-    sidebarHide.style.transition = "all .5s ease";
-    sidebarHide.style.visibility = "hidden";
-    //sidebarUserImg.style.left = "15px";
-    //sidebarUserImg.style.visibility = "hidden";
-
-    //hidden
-  } else {
-    sidebarOpen.style.left = "-250px";
-    sidebarHide.style.visibility = "visible";
-    //sidebarUserImg.style.left = "15px";
+    tabDiv.style.display = "none";
   }
 }
- */
+
+function getLastWord(words) {
+  var n = words.split(" ");
+  return n[n.length - 1];
+}
+
+function selectTab(element) {
+  deselectIcons();
+  selectIcon(element);
+  hideTabs();
+
+  var tabId = getLastWord(element.className);
+  var tab = (document.getElementById(tabId).style.display = "block");
+}

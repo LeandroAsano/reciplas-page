@@ -50,22 +50,22 @@
         <p>Producción</p>
         <ul>
           <li>
-            <a onclick="selectItem(this)" class="noSelected new" href="#"
+            <a onclick="selectTab(this)" class="tab noSelected new nuevoProducto" href="#"
               ><i class="fas fa-cart-plus"></i> Ingresar Producto</a
             >
           </li>
           <li>
-            <a onclick="selectItem(this)" class="noSelected add" href="#"
+            <a onclick="selectTab(this)" class="tab noSelected add agregarStock" href="#"
               ><i class="fas fa-plus-square"></i>Agregar Stock</a
             >
           </li>
           <li>
-            <a onclick="selectItem(this)" class="noSelected look" href="#"
+            <a onclick="selectTab(this)" class="tab noSelected look consultarStock" href="#"
               ><i class="fas fa-search"></i> Consultar Stock</a
             >
           </li>
           <li>
-            <a onclick="selectItem(this)" class="noSelected book" href="#"
+            <a onclick="selectTab(this)" class="noSelected book" href="#"
               ><i class="fas fa-book fa-lg"></i> Emitir Reportes</a
             >
           </li>
@@ -95,16 +95,16 @@
         />
         <ul>
           <li>
-            <a onclick="selectItem(this)" class="noSelected new" href="#"
+            <a onclick="selectItem(this)" class="tab noSelected new nuevoProducto" href="#"
               ><i class="fas fa-cart-plus"></i></a>
           </li>
           <li>
-            <a onclick="selectItem(this)" class="noSelected add" href="#"
+            <a onclick="selectItem(this)" class="tab noSelected add agregarStock" href="#"
               ><i class="fas fa-plus-square"></i
             ></a>
           </li>
           <li>
-            <a onclick="selectItem(this)" class="noSelected look" href="#"
+            <a onclick="selectItem(this)" class="tab noSelected look consultarStock" href="#"
               ><i class="fas fa-search"></i
             ></a>
           </li>
@@ -236,6 +236,7 @@
             <th scope="col">ID</th>
             <th scope="col">Nombre</th>
             <th scope="col">Material</th>
+            <th scope="col">Stock</th>
             <th scope="col">Proveedor</th>
             <th scope="col">Detalle</th>
             <th scope="col">Opciones</th>
@@ -246,6 +247,7 @@
             <th scope="row">213513257</th>
             <td>Silla Alta</td>
             <td>Plastico</td>
+            <td>24</td>
             <td>Plasti corp</td>
             <td><button data-toggle="modal" data-target="#exampleModal"
                 class="btn btn-primary DetailButton">Detalle</button></td>
@@ -260,6 +262,7 @@
             <th scope="row">123512365</th>
             <td>Silla Alta</td>
             <td>Plastico</td>
+            <td>62</td>
             <td>Plasti corp</td>
             <td><button data-toggle="modal" data-target="#exampleModal"
                 class="btn btn-primary DetailButton">Detalle</button></td>
@@ -273,6 +276,7 @@
             <th scope="row">213521351</th>
             <td>Silla Alta</td>
             <td>Plastico</td>
+            <td>16</td>
             <td>Plasti corp</td>
             <td><button data-toggle="modal" data-target="#exampleModal"
                 class="btn btn-primary DetailButton">Detalle</button></td>
@@ -286,6 +290,7 @@
             <th scope="row">2135113463</th>
             <td>Silla Alta</td>
             <td>Plastico</td>
+            <td>31</td>
             <td>Plasti corp</td>
             <td><button data-toggle="modal" data-target="#exampleModal"
                 class="btn btn-primary DetailButton">Detalle</button></td>
@@ -299,6 +304,7 @@
             <th scope="row">125123646</th>
             <td>Silla Alta</td>
             <td>Plastico</td>
+            <td>108</td>
             <td>Plasti corp</td>
             <td><button data-toggle="modal" data-target="#exampleModal"
                 class="btn btn-primary DetailButton">Detalle</button></td>
@@ -312,6 +318,7 @@
             <th scope="row">62136436</th>
             <td>Silla Alta</td>
             <td>Plastico</td>
+            <td>74</td>
             <td>Plasti corp</td>
             <td><button data-toggle="modal" data-target="#exampleModal"
                 class="btn btn-primary DetailButton">Detalle</button></td>
