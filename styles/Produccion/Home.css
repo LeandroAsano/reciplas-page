@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arimo&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+div#add{
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 1420px;
+    height: 600px;
+    background-color: rgba(104, 104, 104, 0.623);
+}
+
+h1 {
+    padding: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Anton', sans-serif;
+}
+
+#add label{
+    margin-top: 20px;
+    font-size: 20px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+#add input{
+    width: 90%;
+    margin-left: 30px;
+}
+
+#descripcionInput {
+    height: 120px;
+}
+
+form button{
+    margin-top: 50px;
+    margin-right: 20px;
+    width: 500px;
+}
+

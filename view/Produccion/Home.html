@@ -12,14 +12,16 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/styles/Home.css" />
- 
-
+    <!---------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="/styles/Produccion/Home.css" />
+    <!---------------------------------------------------------------------------------------->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <!---------------------------------------------------------------------------------------->
   </head>
   <body>
     <!--navbar-->
@@ -30,65 +32,148 @@
     </nav>
 
     <!--sidebar-open-->
-  <div class="wrapper">
-    <div id='sidebar-expanded' class="sidebar bg-dark" onmouseover="showBar()" onmouseout="hideBar()">
-      <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" style="width: 50px; height: 50px;" id="showUserImg"
-        class="rounded-circle z-depth-0" alt="avatar image">
-      <h2>Florencia</h2>
-        <P>Producción</P>
-      <ul>
-        <li>
-          <a onclick="selectItem(this)" class="noSelected home" href="#"><i class="fas fa-home fa-lg"></i> Home</a>
-        </li>
-        <li>
-          <a onclick="selectItem(this)" class="noSelected add" href="#"><i class="fas fa-plus-square"></i>Ingresar Stock</a>
-        </li>
-        <li>
-          <a onclick="selectItem(this)" class="noSelected edit" href="#"><i class="fas fa-edit"></i> Modificar Stock</a>
-        </li>
-        <li>
-          <a onclick="selectItem(this)" class="noSelected look" href="#"><i class="fas fa-search"></i> Consultar Stock</a>
-        </li>
-        <li>
-          <a onclick="selectItem(this)" class="noSelected book" href="#"><i class="fas fa-book fa-lg"></i> Emitir Reportes</a>
-        </li>
-        <li>
-          <a href="/Login_v15/index.html"><i class="fas fa-sign-out-alt fa-lg"></i> Logout</a>
-        </li>
-      </ul>
+    <div class="wrapper">
+      <div
+        id="sidebar-expanded"
+        class="sidebar bg-dark"
+        onmouseover="showBar()"
+        onmouseout="hideBar()"
+      >
+        <img
+          src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg"
+          style="width: 50px; height: 50px;"
+          id="showUserImg"
+          class="rounded-circle z-depth-0"
+          alt="avatar image"
+        />
+        <h2>Florencia</h2>
+        <p>Producción</p>
+        <ul>
+          <li>
+            <a onclick="selectItem(this)" class="noSelected home" href="#"
+              ><i class="fas fa-home fa-lg"></i> Home</a
+            >
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="noSelected add" href="#"
+              ><i class="fas fa-plus-square"></i>Ingresar Stock</a
+            >
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="noSelected edit" href="#"
+              ><i class="fas fa-edit"></i> Modificar Stock</a
+            >
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="noSelected look" href="#"
+              ><i class="fas fa-search"></i> Consultar Stock</a
+            >
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="noSelected book" href="#"
+              ><i class="fas fa-book fa-lg"></i> Emitir Reportes</a
+            >
+          </li>
+          <li>
+            <a href="/Login_v15/index.html"
+              ><i class="fas fa-sign-out-alt fa-lg"></i> Logout</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  
-  <!--sidebar-closed-->
-  <div class="wrapper">
-    <div id='sidebar-hide' class="sidebar bg-dark" onmouseover="showBar()" onmouseout="hideBar()">
-      <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" style="width: 50px; height: 50px;" id="hideUserImg"
-        class="rounded-circle z-depth-0" alt="avatar image">
-      <ul>
-        <li>
-          <a  onclick="selectItem(this)" class="noSelected home" href="#"><i class="fas fa-home fa-lg"></i></a>
-        </li>
-        <li>
-          <a onclick="selectItem(this)" class="noSelected add" href="#"><i class="fas fa-plus-square"></i></a>
-        </li>
-        <li>
-          <a onclick="selectItem(this)" class="noSelected edit" href="#"><i class="fas fa-edit"></i></a>
-        </li>
-        <li>
-          <a  onclick="selectItem(this)" class="noSelected look" href="#"><i class="fas fa-search"></i></a>
-        </li>
-        <li>
-          <a onclick="selectItem(this)" class="noSelected book" href="#"><i class="fas fa-book fa-lg"></i></a>
-        </li>
-        <li>
-          <a href="/Login_v15/index.html"><i class="fas fa-sign-out-alt fa-lg"></i></a>
-        </li>
-      </ul>
+
+    <!--sidebar-closed-->
+    <div class="wrapper">
+      <div
+        id="sidebar-hide"
+        class="sidebar bg-dark"
+        onmouseover="showBar()"
+        onmouseout="hideBar()"
+      >
+        <img
+          src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg"
+          style="width: 50px; height: 50px;"
+          id="hideUserImg"
+          class="rounded-circle z-depth-0"
+          alt="avatar image"
+        />
+        <ul>
+          <li>
+            <a onclick="selectItem(this)" class="noSelected home" href="#"
+              ><i class="fas fa-home fa-lg"></i
+            ></a>
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="noSelected add" href="#"
+              ><i class="fas fa-plus-square"></i
+            ></a>
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="noSelected edit" href="#"
+              ><i class="fas fa-edit"></i
+            ></a>
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="noSelected look" href="#"
+              ><i class="fas fa-search"></i
+            ></a>
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="noSelected book" href="#"
+              ><i class="fas fa-book fa-lg"></i
+            ></a>
+          </li>
+          <li>
+            <a href="/Login_v15/index.html"
+              ><i class="fas fa-sign-out-alt fa-lg"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
 
     <!--body-->
 
+    <div id="add" class="card">
+      <h1>INGRESAR NUEVO PRODUCTO</h1>
+      <div class="card-body">
+        <div style="width: 100%; height: 100px; float: left;">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4" class="text-center" >NOMBRE PRODUCTO</label>
+                <input type="email" class="form-control" id="inputNombre" placeholder="Nombre...">
+              </div>
+              <div class="form-group col-md-1" style="margin-left: -65px;">
+                <label for="inputCity" class="text-center" style="margin-left: 20px;">CANTIDAD</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="xxx">
+              </div>
+              <div class="form-group col-md-5" style="margin-left: 23px;">
+                <label for="inputState" class="text-center" >MATERIA PRIMA</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Seleccionar..</option>
+                  <option>Roble</option>
+                  <option>Carton</option>
+                  <option>Plástico</option>
+                  <option>Papel</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <label for="inputAddress">DESCRIPCIÓN</label>
+              <textarea class="form-control" placeholder="Descripcion aquí..." style="width: 95%; margin-left: 30px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success" style="margin-left: 200px; ">Agregar</button>
+            <button type="submit" class="btn btn-success" >Limpiar</button>
+            
+          </form>
+        </div>
+        
+      </div>
+    </div>
+
+    
     <footer></footer>
 
     <!--CUSTOM JS-->
