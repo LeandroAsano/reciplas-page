@@ -162,7 +162,7 @@
               <label for="inputAddress">DESCRIPCIÓN</label>
               <textarea class="form-control" placeholder="Descripcion aquí..." style="width: 95%; margin-left: 30px;"></textarea>
             </div>
-            <button type="submit" class="btn btn-success" style="margin-left: 200px; ">Agregar</button>
+            <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#createdModal" style="margin-left: 200px; ">Agregar</button>
             <button type="submit" class="btn btn-success" >Limpiar</button>
             
           </form>
@@ -190,7 +190,7 @@
               <label for="inputAddress">DESCRIPCIÓN</label>
               <textarea class="form-control" placeholder="Descripcion aquí..." style="width: 60%; margin-left: 255px;"></textarea>
             </div>
-            <button type="submit" class="btn btn-success col-md-2" style="margin-left: 400px; margin-top: 30px;">Agregar</button>
+            <button type="submit" class="btn btn-success col-md-2" data-toggle="modal" data-target="#createdModal" style="margin-left: 400px; margin-top: 30px;">Agregar</button>
             <button type="submit" class="btn btn-success col-md-2" style="margin-left: 50px;margin-top: 30px;">Limpiar</button>
             
           </form>
@@ -227,7 +227,7 @@
             </div>
           </div>
         
-          <button type="submit" class="btn btn-success" style="margin-left: 500px; margin-top: 30px; width: 400px;">Agregar</button>
+          <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#createdModal" style="margin-left: 500px; margin-top: 30px; width: 400px;">Agregar</button>
         </form>
       </div>
 
@@ -288,7 +288,7 @@
             <td><button data-toggle="modal" data-target="#exampleModal"
                 class="btn btn-primary DetailButton">Detalle</button></td>
             <td class="operations">
-              <a href="#" title="Editar"><i class="fas fa-pen-square fa-3x text-success"></i></a>
+              <a href="#" title="Editar" data-toggle="modal" data-target="#editModal"><i class="fas fa-pen-square fa-3x text-success"></i></a>
               <a href="#" data-toggle="modal" data-target="#deleteModal" title="Borrar"><i
                   class="fas fa-minus-square fa-3x text-danger ml-2"></i></a>
             </td>
@@ -387,6 +387,23 @@
 </div>
 
 
+ <!-- Modal Detalle -->
+ <div class="modal fade" id="createdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLabel">Operacion Exitosa!</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+     </div>
+   </div>
+ </div>
+</div>
     
     <!-- Modal Detalle -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -407,6 +424,52 @@
       </div>
     </div>
   </div>
+</div>
+
+ <!-- Modal Edit -->
+ <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLabel">Silla Alta</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+       <div>
+        <label for="inputState" class="text-center text-dark" >MATERIA PRIMA</label>
+        <select id="inputState" class="form-control">
+          <option selected>Plástico</option>
+          <option>Roble</option>
+          <option>Carton</option>
+          <option>Papel</option>
+        </select>
+       </div>
+       <div style="margin-top: 30px;">
+        <label class="text-center text-dark" >DETALLE</label>
+        <textarea class="form-control" placeholder="" >Esta silla se encuentra en perfecto esta y esta disponible para su uso.</textarea>
+       </div>
+       <div style="margin-top: 30px;">
+        <label for="inputEmail4" class="text-center text-dark" >STOCK</label>
+        <input type="email" class="form-control" value="24" placeholder="Nombre...">
+       </div>
+       <div style="margin-top: 30px;">
+        <label for="inputState" class="text-center text-dark" >PROVEEDOR</label>
+        <select id="inputState" class="form-control">
+          <option selected>Plasti corp</option>
+          <option>Made corp</option>
+          <option>Pape corp</option>
+        </select>
+       </div>
+     </div>
+     <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+      <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+     </div>
+   </div>
+ </div>
 </div>
 
 <!-- Modal Delet -->
