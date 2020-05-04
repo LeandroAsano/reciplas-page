@@ -3,17 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Arimo&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-
-div#add{
-    position: relative;
-    z-index:-1;
-    margin-top: 30px;
-    margin-left: 100px;
-    width: 1420px;
-    height: 600px;
-    background-color: rgba(104, 104, 104, 0.623);
-}
-
 h1 {
     padding: 30px;
     text-align: center;
@@ -21,26 +10,86 @@ h1 {
     font-family: 'Anton', sans-serif;
 }
 
-#add label{
-    margin-top: 20px;
+label{
     font-size: 20px;
     width: 100%;
     color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
 }
 
-#add input{
+/* INGRESAR PRODUCTO */
+
+div#add{
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 1420px;
+    height: 600px;
+    background-color: rgba(104, 104, 104, 0);
+}
+
+#add li a.nav-link{
+    background-color: rgb(58, 122, 58);
+    border-color: rgb(12, 94, 21);
+    color: #8f8e8e;
+}
+
+#add li a.nav-link.active{
+    background-color: rgba(29, 255, 29, 0.678);
+    color: #f7f7f7;
+}
+
+#nuevoProducto{
+    display: none;
+}
+
+#nuevoProducto label{
+    margin-top: 20px;
+}
+
+#nuevoProducto input{
     width: 90%;
     margin-left: 30px;
 }
 
-#descripcionInput {
+#nuevoProducto #descripcionInput {
     height: 120px;
 }
 
-form button{
+#nuevoProducto form button{
     margin-top: 50px;
     margin-right: 20px;
     width: 500px;
 }
 
+/* AGREGAR STOCK */
+
+#agregarStock{
+    display: none;
+}
+
+#agregarStock label{
+    width: 150px;
+    margin-left: 200px;
+}
+
+/* CONSULTAR STOCK */
+
+#consultarStock{
+    display: none;
+}
+
+div#TablaProductos{
+    
+    margin-left: 0px;
+    width: 100%;
+}
+
+#searchBox{
+    margin-top: 40px;
+    margin-left: 140px;
+    margin-bottom: 10px;
+}
+
+#searchBox select{
+    width: 360px;
+}
