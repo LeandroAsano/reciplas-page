@@ -4,7 +4,7 @@ function loginUser() {
 
   switch (user.value) {
     case "Ventas":
-      loginButton.setAttribute("href", "../view/Ventas/Home.html");
+      loginButton.setAttribute("href", "../view/Ventas/Ventas.html");
       break;
     case "Produccion":
       loginButton.setAttribute("href", "../view/Produccion/Home.html");
