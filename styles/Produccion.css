@@ -12,14 +12,11 @@ h1 {
 
 label{
     font-size: 20px;
-    width: 100%;
     color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
 }
 
-/* INGRESAR PRODUCTO */
-
-div#add{
+#add{
     margin-top: 30px;
     margin-left: 100px;
     width: 1420px;
@@ -38,8 +35,16 @@ div#add{
     color: #f7f7f7;
 }
 
-#nuevoProducto{
+/* CONSULTAR PEDIDOS */
+
+#pedidos{
     display: block;
+}
+
+/* INGRESAR PRODUCTO */
+
+#nuevoProducto{
+    display: none;
 }
 
 #nuevoProducto label{
@@ -78,9 +83,13 @@ div#add{
     margin-left: 200px;
 }
 
-/* CONSULTAR STOCK */
+/* CONSULTAR STOCK PRODUCTOS*/
 
-#consultarStock{
+#tipoStockProd{
+    margin-left: 140px;
+}
+
+#consultarStockProd{
     display: none;
 }
 
@@ -99,3 +108,46 @@ div#TablaProductos{
 #searchBox select{
     width: 360px;
 }
+
+/* CONSULTAR STOCK MATERIALES*/
+
+#tipoStock{
+    margin-left: 140px;
+    margin-bottom: 30px;
+}
+
+#consultarStockMateriales{
+    display: none;
+}
+
+/* REPORTES */
+
+#reportes{
+    display: none;
+}
+
+#tipoReporte{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.table {
+    margin-top: 10px;
+  }
+  
+  #TablaProductosSemana {
+    display: none;
+  }
+  
+  #TablaProductosMes {
+    display: none;
+  }
+  
+  #TablaProductosAño {
+    display: block;
+  }
+
+  .pagination {
+    margin-left: 130px;
+  }

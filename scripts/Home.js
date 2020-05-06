@@ -53,8 +53,11 @@ function selectIcon(element) {
 function hideTabs() {
   var tabs = document.getElementsByClassName("tab");
 
+  
+
   for (var i = 0; i < (tabs.length/2); i++) {
     var tabId = getLastWord(tabs[i].className);
+    
     var tabDiv = document.getElementById(tabId);
 
     tabDiv.style.display = "none";
