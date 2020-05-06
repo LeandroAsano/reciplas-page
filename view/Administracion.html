@@ -4,24 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Reciplas - Ventas</title>
+    <title>Reciplas - Administracion</title>
 
     <!-- font awesome    -->
     <script src="https://kit.fontawesome.com/d65802d63a.js"></script>
     <!-- SCROOLL REVEAL JS LIBRARY CDN -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="../../styles/Home.css" />
-    <!------------------------------------------------------------------------------------->
-    <link rel="stylesheet" href="../../styles/Ventas/Ventas.css" />
-    <!------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="../styles/Base.css" />
+    <!---------------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="../styles/Administracion.css" />
+    <!---------------------------------------------------------------------------------------->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <!------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------->
   </head>
   <body>
     <!--navbar-->
@@ -40,17 +40,31 @@
         onmouseout="hideBar()"
       >
         <img
-          src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
+          src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
           style="width: 50px; height: 50px;"
           id="showUserImg"
           class="rounded-circle z-depth-0"
           alt="avatar image"
         />
-        <h2>VENTAS</h2>
-        <p>Sotelo, Carolina</p>
+        <h2>Pablo</h2>
+        <p>Administración</p>
         <ul>
           <li>
-            <a onclick="selectTab(this)" class="selected book" href="#"
+            <a onclick="selectTab(this)" class="tab selected new nuevoProducto" href="#"
+              ><i class="fas fa-cart-plus"></i> Ingresar Producto</a
+            >
+          </li>
+          <li>
+            <a onclick="selectTab(this)" class="tab noSelected mat nuevaMateria" href="#"
+              ><i class="fas fa-puzzle-piece"></i>Ingresar Materia</a>
+          </li>
+          <li>
+            <a onclick="selectTab(this)" class="tab noSelected look consultarStock" href="#"
+              ><i class="fas fa-search"></i> Consultar Stock</a
+            >
+          </li>
+          <li>
+            <a onclick="selectTab(this)" class="tab noSelected book reportes" href="#"
               ><i class="fas fa-book fa-lg"></i> Emitir Reportes</a
             >
           </li>
@@ -72,7 +86,7 @@
         onmouseout="hideBar()"
       >
         <img
-          src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
+          src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg"
           style="width: 50px; height: 50px;"
           id="hideUserImg"
           class="rounded-circle z-depth-0"
@@ -80,7 +94,20 @@
         />
         <ul>
           <li>
-            <a onclick="selectItem(this)" class="selected book" href="#"
+            <a onclick="selectItem(this)" class="tab selected new nuevoProducto" href="#"
+              ><i class="fas fa-cart-plus"></i></a>
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="tab noSelected mat nuevaMateria" href="#"
+              ><i class="fas fa-puzzle-piece"></i></a>
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="tab noSelected look consultarStock" href="#"
+              ><i class="fas fa-search"></i
+            ></a>
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="tab noSelected book reportes" href="#"
               ><i class="fas fa-book fa-lg"></i
             ></a>
           </li>
@@ -93,8 +120,226 @@
       </div>
     </div>
 
-    <!-------Reportes------->
-    <div id="container">
+    <!--body-->
+
+    <div id="body" class="card">
+      <!--NUEVO PRODUCTO-->
+      <div id="nuevoProducto" >
+        <h1>INGRESAR NUEVO PRODUCTO</h1>
+        <div style="width: 100%; height: 100px; float: left;">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4" class="text-center" style="margin-left: 70px;">NOMBRE PRODUCTO</label>
+                <input type="email" class="form-control" style="margin-left: 60px;" id="inputNombre" placeholder="Nombre...">
+              </div>
+              <div class="form-group col-md-1" style="margin-left: -105px;">
+                <label for="inputCity" class="text-center" style="margin-left: 20px;">CANTIDAD</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="xxx">
+              </div>
+              <div class="form-group col-md-5" style="margin-left: 23px;">
+                <label for="inputState" class="text-center" >MATERIA PRIMA</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Seleccionar..</option>
+                  <option>Roble</option>
+                  <option>Carton</option>
+                  <option>Plástico</option>
+                  <option>Papel</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <label for="inputAddress">DESCRIPCIÓN</label>
+              <textarea class="form-control" placeholder="Descripcion aquí..." style="width: 90%; margin-left: 60px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#createdModal" style="margin-left: 200px; ">Agregar</button>
+            <button type="submit" class="btn btn-success" >Limpiar</button>
+            
+          </form>
+        </div>
+      </div>
+
+      <!--NUEVA MATERIA-->
+      <div id="nuevaMateria">
+        <h1>INGRESAR NUEVA MATERIA PRIMA</h1>
+        <div style="width: 100%; height: 100px; float: left;">
+          <form>
+            <div class="form-row" style="margin-left: 250px;">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4" class="text-center" >NOMBRE MATERIA</label>
+                <input type="email" class="form-control" id="inputNombre" placeholder="Nombre...">
+              </div>
+
+              <div class="form-group col-md-2" style="margin-left: 65px;">
+                <label for="inputCity" class="text-center" style="margin-left: 0px; width: 200px;">CANTIDAD (Kgrs)</label>
+                <input type="text" class="form-control" style="margin-left: 10px" id="inputCity" placeholder="xxx">
+              </div>
+              
+            </div>
+            <div class="form-group text-center">
+              <label for="inputAddress">DESCRIPCIÓN</label>
+              <textarea class="form-control" placeholder="Descripcion aquí..." style="width: 60%; margin-left: 255px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success col-md-2" data-toggle="modal" data-target="#createdModal" style="margin-left: 400px; margin-top: 30px;">Agregar</button>
+            <button type="submit" class="btn btn-success col-md-2" style="margin-left: 50px;margin-top: 30px;">Limpiar</button>
+            
+          </form>
+        </div>
+
+      </div>
+
+      <!--CONSULTAR STOCK-->
+      <div id="consultarStock">
+  <!--Search-->
+<h1 style="margin-top: 25px; margin-bottom: -30px; ">PRODUCTOS</h1>
+<form class="form-row" id="searchBox">
+  <div id="searchIconCont">
+    <button class="btn btn-success" id="searchButton">
+      <i class="fas fa-search fa-lg text-dark" id="searchIcon"></i>
+    </button>
+  </div>
+  <input class="form-control" type="text" placeholder="ID Producto" aria-label="Search" style="width: 200px; margin-left: 10px;">
+
+  <button class="btn btn-success" style="width: 100px; margin-left: 250px; margin-right: 10px;">
+    FILTRAR
+  </button>
+  <select  class="form-control" style="width: 300px;">
+    <option selected>PS Prov</option>
+    <option>PVS Prov</option>
+    <option>PET Prov</option>
+  </select>
+
+  <select class="form-control" style="width: 200px; margin-left: 10px;">
+    <option selected>PS</option>
+    <option>PVS</option>
+    <option>PET</option>
+  </select>
+</form>
+
+      
+    </form>
+
+    <!--TABLA-->
+    <div id="TablaProductos">
+      <table class="table table-hover rounded container table-dark" >
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Material</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Proveedor</th>
+            <th scope="col">Detalle</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">213513257</th>
+            <td>Silla Alta</td>
+            <td>Plastico</td>
+            <td>24</td>
+            <td>Plasti corp</td>
+            <td><button data-toggle="modal" data-target="#exampleModal"
+                class="btn btn-primary DetailButton">Detalle</button></td>
+            <td class="operations">
+              <a href="#" title="Editar" data-toggle="modal" data-target="#editModal"><i class="fas fa-pen-square fa-3x text-success"></i></a>
+              <a href="#" data-toggle="modal" data-target="#deleteModal" title="Borrar"><i
+                  class="fas fa-minus-square fa-3x text-danger ml-2"></i></a>
+            </td>
+           
+          </tr>
+          <tr>
+            <th scope="row">123512365</th>
+            <td>Silla Alta</td>
+            <td>Plastico</td>
+            <td>62</td>
+            <td>Plasti corp</td>
+            <td><button data-toggle="modal" data-target="#exampleModal"
+                class="btn btn-primary DetailButton">Detalle</button></td>
+            <td class="operations">
+              <a href="#" title="Editar"><i class="fas fa-pen-square fa-3x text-success"></i></a>
+              <a href="#" data-toggle="modal" data-target="#deleteModal" title="Borrar"><i
+                  class="fas fa-minus-square fa-3x text-danger ml-2"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">213521351</th>
+            <td>Silla Alta</td>
+            <td>Plastico</td>
+            <td>16</td>
+            <td>Plasti corp</td>
+            <td><button data-toggle="modal" data-target="#exampleModal"
+                class="btn btn-primary DetailButton">Detalle</button></td>
+            <td class="operations">
+              <a href="#" title="Editar"><i class="fas fa-pen-square fa-3x text-success"></i></a>
+              <a href="#" data-toggle="modal" data-target="#deleteModal" title="Borrar"><i
+                  class="fas fa-minus-square fa-3x text-danger ml-2"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2135113463</th>
+            <td>Silla Alta</td>
+            <td>Plastico</td>
+            <td>31</td>
+            <td>Plasti corp</td>
+            <td><button data-toggle="modal" data-target="#exampleModal"
+                class="btn btn-primary DetailButton">Detalle</button></td>
+            <td class="operations">
+              <a href="#" title="Editar"><i class="fas fa-pen-square fa-3x text-success"></i></a>
+              <a href="#" data-toggle="modal" data-target="#deleteModal" title="Borrar"><i
+                  class="fas fa-minus-square fa-3x text-danger ml-2"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">125123646</th>
+            <td>Silla Alta</td>
+            <td>Plastico</td>
+            <td>108</td>
+            <td>Plasti corp</td>
+            <td><button data-toggle="modal" data-target="#exampleModal"
+                class="btn btn-primary DetailButton">Detalle</button></td>
+            <td class="operations">
+              <a href="#" title="Editar"><i class="fas fa-pen-square fa-3x text-success"></i></a>
+              <a href="#" data-toggle="modal" data-target="#deleteModal" title="Borrar"><i
+                  class="fas fa-minus-square fa-3x text-danger ml-2"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">62136436</th>
+            <td>Silla Alta</td>
+            <td>Plastico</td>
+            <td>74</td>
+            <td>Plasti corp</td>
+            <td><button data-toggle="modal" data-target="#exampleModal"
+                class="btn btn-primary DetailButton">Detalle</button></td>
+            <td class="operations">
+              <a href="#" title="Editar"><i class="fas fa-pen-square fa-3x text-success"></i></a>
+              <a href="#" data-toggle="modal" data-target="#deleteModal" title="Borrar"><i
+                  class="fas fa-minus-square fa-3x text-danger ml-2"></i></a>
+            </td>
+          </tr>
+        
+        
+        </tbody>
+  
+      </table>
+      <div class="form-row container col-12">
+        <ul class="pagination" style="margin-left: 190px">
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">1</a></li>
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">2</a></li>
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">3</a></li>
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">Siguiente Página</a></li>
+        </ul>
+      </div>
+  
+  
+  
+    </div>
+      </div>
+
+      <!-------Reportes------->
+    <div id="reportes">
       <div id="tipoReporte">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
           <label class="btn btn-success active">
@@ -165,9 +410,7 @@
             style="width: 20%; position: absolute; margin-left: 950px;"
           >
             <option selected>Productos Producidos</option>
-            <option>Materiales Utilizados</option>
-            <option>Compras Efectuadas</option>
-            <option>Ventas Realizadas</option>
+            <option>Stock Materiales</option>
           </select>
         </div>
 
@@ -294,7 +537,7 @@
             </tbody>
           </table>
           <div class="form-row container col-12">
-            <ul class="pagination" style="margin-left: 190px;">
+            <ul class="pagination" >
               <li class="page-item">
                 <a class="page-link bg-dark border-dark" href="#">1</a>
               </li>
@@ -429,7 +672,7 @@
             </tbody>
           </table>
           <div class="form-row container col-12">
-            <ul class="pagination" style="margin-left: 90px;">
+            <ul class="pagination">
               <li class="page-item">
                 <a class="page-link bg-dark border-dark" href="#">1</a>
               </li>
@@ -558,7 +801,7 @@
           </table>
 
           <div class="form-row container col-12">
-            <ul class="pagination" style="margin-left: 90px;">
+            <ul class="pagination">
               <li class="page-item">
                 <a class="page-link bg-dark border-dark" href="#">1</a>
               </li>
@@ -580,23 +823,129 @@
 
     </div>
 
-    <footer></footer>
+    </div>
 
-    <!-----------------------------CUSTOM JS----------------------------->
-    <script type="text/javascript" src="../../scripts/Home.js"></script>
-    <!-----------------------------CUSTOM JS----------------------------->
-    <script type="text/javascript" src="../../scripts/Ventas.js"></script>
 
+ <!-- Modal Detalle -->
+ <div class="modal fade" id="createdModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLabel">Operacion Exitosa!</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+     </div>
+   </div>
+ </div>
+</div>
+    
+    <!-- Modal Detalle -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Silla Alta</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Esta silla se encuentra en perfecto esta y esta disponible para su uso.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Modal Edit -->
+ <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLabel">Silla Alta</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+       <div>
+        <label for="inputState" class="text-center text-dark" >MATERIA PRIMA</label>
+        <select id="inputState" class="form-control">
+          <option selected>Plástico</option>
+          <option>Roble</option>
+          <option>Carton</option>
+          <option>Papel</option>
+        </select>
+       </div>
+       <div style="margin-top: 30px;">
+        <label class="text-center text-dark" >DETALLE</label>
+        <textarea class="form-control" placeholder="" >Esta silla se encuentra en perfecto esta y esta disponible para su uso.</textarea>
+       </div>
+       <div style="margin-top: 30px;">
+        <label for="inputEmail4" class="text-center text-dark" >STOCK</label>
+        <input type="email" class="form-control" value="24" placeholder="Nombre...">
+       </div>
+       <div style="margin-top: 30px;">
+        <label for="inputState" class="text-center text-dark" >PROVEEDOR</label>
+        <select id="inputState" class="form-control">
+          <option selected>Plasti corp</option>
+          <option>Made corp</option>
+          <option>Pape corp</option>
+        </select>
+       </div>
+     </div>
+     <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+      <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- Modal Delet -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="deletModalLabel">Esta seguro?</h5>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" data-dismiss="modal">Eliminar</button>
+      <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!-------------------------------------CUSTOM JS---------------------------------------->
+    <script type="text/javascript" src="../scripts/Home.js"></script>
+     <!-------------------------------------CUSTOM JS---------------------------------------->
+     <script type="text/javascript" src="../scripts/Login.js"></script>
+    <!-------------------------------------CUSTOM JS---------------------------------------->
+    <script type="text/javascript" src="../scripts/Production.js"></script>
+    <!-------------------------------------------------------------------------------------->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"
     ></script>
+    <!-------------------------------------------------------------------------------------->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"
     ></script>
+    <!-------------------------------------------------------------------------------------->
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"

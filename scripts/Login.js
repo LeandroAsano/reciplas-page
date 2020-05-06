@@ -4,13 +4,13 @@ function loginUser() {
 
   switch (user.value) {
     case "Ventas":
-      loginButton.setAttribute("href", "../view/Ventas/Ventas.html");
+      loginButton.setAttribute("href", "../view/Ventas.html");
       break;
     case "Produccion":
-      loginButton.setAttribute("href", "../view/Produccion/Home.html");
+      loginButton.setAttribute("href", "../view/Produccion.html");
       break;
     case "Administracion":
-      loginButton.setAttribute("href", "../view/Administracion/Administracion.html");
+      loginButton.setAttribute("href", "../view/Administracion.html");
       break;
   }
 }
