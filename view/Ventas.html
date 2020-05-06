@@ -55,6 +55,11 @@
             >
           </li>
           <li>
+            <a onclick="selectTab(this)" class="tab noSelected ped pedidos" href="#"
+              ><i class="far fa-clipboard"></i> Gestiónar Pedidos</a
+            >
+          </li>
+          <li>
             <a onclick="selectTab(this)" class="tab noSelected book reportes" href="#"
               ><i class="fas fa-book fa-lg"></i> Emitir Reportes</a
             >
@@ -89,6 +94,11 @@
               ><i class="fas fa-dollar-sign"></i></a>
           </li>
           <li>
+            <a onclick="selectTab(this)" class="tab noSelected ped pedidos" href="#"
+              ><i class="far fa-clipboard"></i></a
+            >
+          </li>
+          <li>
             <a onclick="selectItem(this)" class="tab noSelected book reportes" href="#"
               ><i class="fas fa-book fa-lg"></i
             ></a>
@@ -105,10 +115,241 @@
     
     <div id="body">
 
-
       <!-------------------------------VENTAS----------------------------->
-      <div id="ventas">
+      <div id="ventas" >
+        <!--Search-->
+<h1 style="margin-top: 25px; margin-bottom: -10px; ">GESTIÓN VENTAS</h1>
+<form class="form-row" id="searchBox" style="margin-left: 124px;">
+  <div id="searchIconCont">
+    <button class="btn btn-success" >
+      <i class="fas fa-search fa-lg text-dark" id="searchIcon"></i>
+    </button>
+  </div>
+  <input class="form-control" type="text" placeholder="Venta/Cliente/Prod" aria-label="Search" style="width: 200px; margin-left: 5px;">
 
+  <div style="margin-left: 670px;">
+    <label>REGISTRAR VENTA</label>
+    <button class="btn btn-success" data-toggle="modal" data-target="#registrarVenta">
+    <i class="fas fa-hand-holding-usd"></i>
+    </button>
+  </div>
+</form>
+
+      
+    </form>
+
+    <!--TABLA-->
+    <div id="TablaProductos">
+      <table class="table table-hover rounded container table-dark" >
+        <thead>
+          <tr>
+            <th scope="col">ID Venta</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Monto</th>
+            <th scope="col">Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>21</td>
+            <td>$540.00</td>
+            <td>24/04/2020</td>
+          </tr>
+          <tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>21</td>
+            <td>$540.00</td>
+            <td>24/04/2020</td>
+          </tr><tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>21</td>
+            <td>$540.00</td>
+            <td>24/04/2020</td>
+          </tr><tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>21</td>
+            <td>$540.00</td>
+            <td>24/04/2020</td>
+          </tr><tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>21</td>
+            <td>$540.00</td>
+            <td>24/04/2020</td>
+          </tr><tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>21</td>
+            <td>$540.00</td>
+            <td>24/04/2020</td>
+          </tr><tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>21</td>
+            <td>$540.00</td>
+            <td>24/04/2020</td>
+          </tr>
+        
+        
+        </tbody>
+  
+      </table>
+      <div class="form-row container col-12">
+        <ul class="pagination" style="margin-left: 190px">
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">1</a></li>
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">2</a></li>
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">3</a></li>
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">Siguiente Página</a></li>
+        </ul>
+      </div>
+  
+  
+  
+    </div>
+      </div>
+
+      <!-------------------------------PEDIDOS----------------------------->
+      <div id="pedidos" >
+        <!--Search-->
+<h1 style="margin-top: 25px; margin-bottom: -10px; ">GESTIÓN PEDIDOS</h1>
+<form class="form-row" id="searchBox" style="margin-left: 124px;">
+  <div id="searchIconCont">
+    <button class="btn btn-success" >
+      <i class="fas fa-search fa-lg text-dark" id="searchIcon"></i>
+    </button>
+  </div>
+  <input class="form-control" type="text" placeholder="Pedido/Cliente/Producto" aria-label="Search" style="width: 200px; margin-left: 5px;">
+
+  <div style="margin-left: 670px;">
+    <label>AGREGAR PEDIDO</label>
+    <button class="btn btn-primary"  data-toggle="modal"
+    data-target="#registrarPedido">
+      <i class="fas fa-plus fa-lg text-white" id="searchIcon"></i>
+    </button>
+  </div>
+</form>
+
+      
+    </form>
+
+    <!--TABLA-->
+    <div id="TablaProductos">
+      <table class="table table-hover rounded container table-dark" >
+        <thead>
+          <tr>
+            <th scope="col">ID Pedido</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Material</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Cerrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>Plastico PVS</td>
+            <td>5</td>
+            <td>24/04/2020</td>
+            <td >Finalizado</td>
+            <td><a href="#" title="Editar"><i class="fas fa-check-square fa-2x text-success"></i></a></td>
+          </tr>
+         
+          <tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>Plastico PVS</td>
+            <td>5</td>
+            <td>24/04/2020</td>
+            <td >
+              Finalizado
+            </td>
+            <td><a href="#" title="Editar"><i class="fas fa-check-square fa-2x text-success"></i></a></td>
+          </tr>
+          <tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>Plastico PVS</td>
+            <td>5</td>
+            <td>24/04/2020</td>
+            <td >
+              En fabricación
+            </td>
+            <td><a href="#" title="Editar"><i class="fas fa-check-square fa-2x text-muted"></i></a></td>
+          </tr>
+          <tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>Plastico PVS</td>
+            <td>5</td>
+            <td>24/04/2020</td>
+            <td >
+              En fabricación
+            </td>
+            <td><a href="#" title="Editar"><i class="fas fa-check-square fa-2x text-muted"></i></a></td>
+          </tr>
+          <tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>Plastico PVS</td>
+            <td>5</td>
+            <td>24/04/2020</td>
+            <td >
+              Espera
+            </td>
+            <td><a href="#" title="Editar"><i class="fas fa-check-square fa-2x text-muted"></i></a></td>
+          </tr>
+          <tr>
+            <th scope="row">212455</th>
+            <td>Pedro</td>
+            <td>Silla Roja</td>
+            <td>Plastico PVS</td>
+            <td>5</td>
+            <td>24/04/2020</td>
+            <td >
+              Espera
+            </td>
+            <td><a href="#" title="Editar"><i class="fas fa-check-square fa-2x text-muted"></i></a></td>
+          </tr>
+        
+        
+        </tbody>
+  
+      </table>
+      <div class="form-row container col-12">
+        <ul class="pagination" style="margin-left: 190px">
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">1</a></li>
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">2</a></li>
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">3</a></li>
+          <li class="page-item"><a class="page-link bg-dark border-dark" href="#">Siguiente Página</a></li>
+        </ul>
+      </div>
+  
+  
+  
+    </div>
       </div>
 
       <!------------------------------REPORTES--------------------------->
@@ -560,15 +801,177 @@
       </div>
     </div>
 
-
-
-
-
-
-
-
     </div>
 
+    <!-- Modal REGISTRAR PEDIDO -->
+<div
+class="modal fade"
+id="registrarPedido"
+tabindex="-1"
+role="dialog"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">REGISTRAR NUEVO PEDIDO</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div>
+        <label for="inputState" class="text-center text-dark"
+          >CLIENTE</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nombre..."
+        />
+      </div>
+      <div style="margin-top: 30px;">
+        <label for="inputState" class="text-center text-dark"
+          >PRODUCTO</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Producto..."
+        />
+      </div>
+      <div style="margin-top: 30px;">
+        <label for="inputState" class="text-center text-dark"
+          >PLASTICO</label
+        >
+        <select id="inputState" class="form-control">
+          <option selected>PVS</option>
+          <option>PET</option>
+          <option>PS</option>
+        </select>
+      </div>
+      <div style="margin-top: 30px;">
+        <label for="inputState" class="text-center text-dark"
+          >CANTIDAD</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="XX"
+        />
+      </div>
+    </div>
+    
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" data-dismiss="modal">
+        Aceptar
+      </button>
+      <button type="submit" class="btn btn-danger" data-dismiss="modal">
+        Cancelar
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Modal REGISTRAR VENTA -->
+<div
+class="modal fade"
+id="registrarVenta"
+tabindex="-2"
+role="dialog"
+aria-labelledby="exampleModalLabel"
+aria-hidden="true"
+>
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">REGISTRAR NUEVA VENTA</h5>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div>
+        <label for="inputState" class="text-center text-dark"
+          >CLIENTE</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nombre..."
+        />
+        <input
+          style="margin-top: 10px;"
+          type="email"
+          class="form-control"
+          placeholder="example@gmail.com"
+        />
+      </div>
+      <div style="margin-top: 30px;">
+        <label for="inputState" class="text-center text-dark"
+          >ID PRODUCTO</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Producto..."
+        />
+      </div>
+      <div style="margin-top: 30px;">
+        <label for="inputState" class="text-center text-dark"
+          >CANTIDAD</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="XX"
+        />
+      </div>
+      <div style="margin-top: 30px;">
+        <label for="inputState" class="text-center text-dark"
+          >MONTO A PAGAR</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          value="$"
+          placeholder="$...."
+        />
+      </div>
+
+      <div class="btn-group btn-group-toggle" style="margin-top: 20px;" data-toggle="buttons">
+        <label class="btn btn-success active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked><i class="fas fa-cash-register"></i> Efectivo
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option2" autocomplete="off"><i class="fas fa-credit-card"></i> Tarjeta
+        </label>
+      </div>
+    </div>
+    
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" data-dismiss="modal">
+        Aceptar
+      </button>
+      <button type="submit" class="btn btn-danger" data-dismiss="modal">
+        Cancelar
+      </button>
+    </div>
+  </div>
+</div>
+</div>
 
     <!-----------------------------CUSTOM JS----------------------------->
     <script type="text/javascript" src="../scripts/Home.js"></script>

@@ -30,6 +30,13 @@ label{
     display : block;
 }
 
+/* PEDIDOS */
+
+#pedidos {
+    display: none;
+}
+
+
 /* REPORTES */
 
 #reportes{
