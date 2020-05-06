@@ -125,7 +125,7 @@ div#TablaProductos{
 }
 
 #TablaProductosSemana{   
-    display: block;
+    display: none;
 }
 
 #TablaProductosMes{
@@ -133,7 +133,7 @@ div#TablaProductos{
 }
 
 #TablaProductosAño{
-    display: none;
+    display: block;
 }
 
 .pagination{
