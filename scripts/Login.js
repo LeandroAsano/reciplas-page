@@ -10,7 +10,7 @@ function loginUser() {
       loginButton.setAttribute("href", "../view/Produccion/Home.html");
       break;
     case "Administracion":
-      loginButton.setAttribute("href", "../view/Administracion/Home.html");
+      loginButton.setAttribute("href", "../view/Administracion/Administracion.html");
       break;
   }
 }
