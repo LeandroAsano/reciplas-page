@@ -17,13 +17,23 @@ label{
     font-family: 'Poppins', sans-serif;
 }
 
-#container{
-    border-radius: 20px;
+#body{
     margin-top: 30px;
     margin-left: 100px;
-    margin-right: 100px;
     width: 90%;
-    background-color: rgba(155, 153, 153, 0.336);
+    height: 750px;
+    background-color: rgba(104, 104, 104, 0.842);
+}
+
+/* VENTAS */
+#ventas{
+    display : block;
+}
+
+/* REPORTES */
+
+#reportes{
+    display: none;
 }
 
 #tipoReporte{
