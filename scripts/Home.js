@@ -57,6 +57,11 @@ function hideTabs() {
 
   for (var i = 0; i < (tabs.length/2); i++) {
     var tabId = getLastWord(tabs[i].className);
+
+    if (tabId=="consultarStockProd"){
+      var matTab = document.getElementById("consultarStockMateriales");
+      matTab.style.display = "none";
+    }
     
     var tabDiv = document.getElementById(tabId);
 

@@ -59,7 +59,7 @@
               ><i class="fas fa-puzzle-piece"></i>Ingresar Materia</a>
           </li>
           <li>
-            <a onclick="selectTab(this)" class="tab noSelected look consultarStock" href="#"
+            <a onclick="selectTab(this)" class="tab noSelected look consultarStockProd" href="#"
               ><i class="fas fa-search"></i> Consultar Stock</a
             >
           </li>
@@ -102,7 +102,7 @@
               ><i class="fas fa-puzzle-piece"></i></a>
           </li>
           <li>
-            <a onclick="selectItem(this)" class="tab noSelected look consultarStock" href="#"
+            <a onclick="selectItem(this)" class="tab noSelected look consultarStockProd" href="#"
               ><i class="fas fa-search"></i
             ></a>
           </li>
@@ -138,13 +138,11 @@
                 <input type="text" class="form-control" id="inputCity" placeholder="xxx">
               </div>
               <div class="form-group col-md-5" style="margin-left: 23px;">
-                <label for="inputState" class="text-center" >MATERIA PRIMA</label>
+                <label for="inputState" class="text-center" >TIPO DE PLÁSTICO</label>
                 <select id="inputState" class="form-control">
-                  <option selected>Seleccionar..</option>
-                  <option>Roble</option>
-                  <option>Carton</option>
-                  <option>Plástico</option>
-                  <option>Papel</option>
+                  <option selected>PVS</option>
+                  <option>PS</option>
+                  <option>PET</option>
                 </select>
               </div>
             </div>
@@ -159,15 +157,19 @@
         </div>
       </div>
 
-      <!--NUEVA MATERIA-->
+      <!--AGREGAR STOCK MATERIA PRIMA-->
       <div id="nuevaMateria">
-        <h1>INGRESAR NUEVA MATERIA PRIMA</h1>
+        <h1>AGREGAR STOCK DE MATERIA PRIMA</h1>
         <div style="width: 100%; height: 100px; float: left;">
           <form>
             <div class="form-row" style="margin-left: 250px;">
               <div class="form-group col-md-6">
-                <label for="inputEmail4" class="text-center" >NOMBRE MATERIA</label>
-                <input type="email" class="form-control" id="inputNombre" placeholder="Nombre...">
+                <label for="inputEmail4" class="text-center" >TIPO PLÁSTICO</label>
+                <select  class="form-control " style="width: 600px;">
+                  <option selected>PS Prov</option>
+                  <option>PVS Prov</option>
+                  <option>PET Prov</option>
+                </select>
               </div>
 
               <div class="form-group col-md-2" style="margin-left: 65px;">
@@ -188,13 +190,41 @@
 
       </div>
 
-      <!--CONSULTAR STOCK-->
-      <div id="consultarStock">
+      <!----------------------CONSULTAR STOCK PRODUCTOS----------------------->
+<div id="consultarStockProd" class="stock">
   <!--Search-->
 <h1 style="margin-top: 25px; margin-bottom: -30px; ">PRODUCTOS</h1>
+
+<div id="tipoStockProd">
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-success active">
+      <input
+        onclick="showStock(this)"
+        class="consultarStockProd"
+        type="radio"
+        name="options"
+        id="option1"
+        autocomplete="off"
+        checked
+      />
+      PRODUCTOS
+    </label>
+    <label class="btn btn-success">
+      <input
+        onclick="showStock(this)"
+        class="consultarStockMateriales"
+        type="radio"
+        name="options"
+        id="option2"
+        autocomplete="off"
+      />
+      MATERIALES
+    </label>
+  </div>
+</div>
 <form class="form-row" id="searchBox">
   <div id="searchIconCont">
-    <button class="btn btn-success" id="searchButton">
+    <button class="btn btn-success" >
       <i class="fas fa-search fa-lg text-dark" id="searchIcon"></i>
     </button>
   </div>
@@ -204,15 +234,17 @@
     FILTRAR
   </button>
   <select  class="form-control" style="width: 300px;">
-    <option selected>PS Prov</option>
-    <option>PVS Prov</option>
-    <option>PET Prov</option>
+    <option selected>Proveedor...</option>
+    <option>PLASTICO PVS</option>
+    <option>PLASTICO PS</option>
+    <option>PLASTICO PET</option>
   </select>
 
   <select class="form-control" style="width: 200px; margin-left: 10px;">
-    <option selected>PS</option>
-    <option>PVS</option>
-    <option>PET</option>
+    <option selected>Material...</option>
+    <option>PLASTICO </option>
+    <option>MADERA </option>
+    <option>METAL</option>
   </select>
 </form>
 
@@ -336,7 +368,97 @@
   
   
     </div>
-      </div>
+
+      
+</div>
+
+<!----------------------CONSULTAR STOCK MATERIALES----------------------->
+<div id="consultarStockMateriales" class="stock">
+  <!--Search-->
+  <h1 style="margin-top: 25px; margin-bottom: -30px; ">MATERIALES</h1>
+
+  <div id="tipoStock">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-success active">
+        <input
+          onclick="showStock(this)"
+          class="consultarStockProd"
+          type="radio"
+          name="options"
+          id="option1"
+          autocomplete="off"
+          checked
+        />
+        PRODUCTOS
+      </label>
+      <label class="btn btn-success">
+        <input
+          onclick="showStock(this)"
+          class="consultarStockMateriales"
+          type="radio"
+          name="options"
+          id="option2"
+          autocomplete="off"
+        />
+        MATERIALES
+      </label>
+    </div>
+  </div>
+  
+    <!--TABLA-->
+    <div id="TablaProductos">
+      <table class="table table-hover rounded container table-dark text-center" >
+        <thead>
+          <tr>
+            <th scope="col">ID MATERIAL</th>
+            <th scope="col">MATERIAL</th>
+            <th scope="col">CANTIDAD(Kgs)</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>PLÁSTICO PVS</td>
+            <td>132</td>
+            <td><div >
+              <button class="btn btn-success" href="#">
+                <i class="fas fa-plus fa-lg text-white" id="searchIcon"></i>
+              </button>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>PLÁSTICO PS</td>
+            <td>241</td>
+            <td><div>
+              <button class="btn btn-success" href="#">
+                <i class="fas fa-plus fa-lg text-white" id="searchIcon"></i>
+              </button>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>PLÁSTICO PET</td>
+            <td>23</td>
+            <td><div >
+              <button class="btn btn-success" href="#">
+                <i class="fas fa-plus fa-lg text-white" id="searchIcon"></i>
+              </button>
+            </div>
+            </td>
+          </tr>
+        
+        
+        </tbody>
+  
+      </table>  
+    </div>
+
+      
+</div>
 
       <!-------Reportes------->
     <div id="reportes">
