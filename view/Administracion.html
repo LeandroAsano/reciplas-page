@@ -64,6 +64,14 @@
             >
           </li>
           <li>
+            <a
+              onclick="selectTab(this)"
+              class="tab noSelected person clientes"
+              href="#"
+              ><i class="fas fa-user-friends"></i>Gestionar Cli/Prov</a
+            >
+          </li>
+          <li>
             <a onclick="selectTab(this)" class="tab noSelected book reportes" href="#"
               ><i class="fas fa-book fa-lg"></i> Emitir Reportes</a
             >
@@ -104,6 +112,14 @@
           <li>
             <a onclick="selectItem(this)" class="tab noSelected look consultarStockProd" href="#"
               ><i class="fas fa-search"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              onclick="selectItem(this)"
+              class="tab noSelected person clientes"
+              href="#"
+              ><i class="fas fa-user-friends"></i
             ></a>
           </li>
           <li>
@@ -235,9 +251,9 @@
   </button>
   <select  class="form-control" style="width: 300px;">
     <option selected>Proveedor...</option>
-    <option>PLASTICO PVS</option>
-    <option>PLASTICO PS</option>
-    <option>PLASTICO PET</option>
+    <option>PROVEEDOR PVS</option>
+    <option>PROVEEDOR PS</option>
+    <option>PROVEEDOR PET</option>
   </select>
 
   <select class="form-control" style="width: 200px; margin-left: 10px;">
@@ -459,6 +475,239 @@
       
 </div>
 
+      <!---------------------------GESTION CLIENTES------------------------->
+      <div id="clientes">
+        <div id="header">
+          <h1>GESTIÓN CLIENTES/PROVEEDORES</h1>
+
+          <button id="addButton" class="btn btn-primary" id="searchButton" data-toggle="modal"
+          data-target="#addModal">
+            <i class="fas fa-plus" style="font-size: 25px;"></i>
+          </button>
+          <div class="form-row">
+            <label style="margin-left: 170px; font-size: 25px;">AGREGAR</label>
+
+            <select
+              id="inputState"
+              class="form-control"
+              style="width: 20%; position: absolute; margin-left: 950px;"
+            >
+              <option selected>Clientes</option>
+              <option>Proveedores</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="gestionCliProv">
+          <!-------------------------TABLA------------------->
+          <div id="TablaCliProv">
+            <table class="table table-hover rounded container table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">ID Persona</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Información</th>
+                  <th scope="col">Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">2135237</th>
+                  <td>ROCA, Marcelo</td>
+                  <td>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#infoModal"
+                      title="Info"
+                      ><i
+                        class="operations fas fa-info-circle text-primary ml-2"
+                        style="font-size: 40px;"
+                      ></i
+                    ></a>
+                  </td>
+                  <td class="operations">
+                    <a
+                      href="#"
+                      title="Editar"
+                      data-toggle="modal"
+                      data-target="#editModal"
+                      ><i class="fas fa-pen-square fa-3x text-success"></i
+                    ></a>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#deleteModal"
+                      title="Borrar"
+                      ><i class="fas fa-minus-square fa-3x text-danger ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">123512365</th>
+                  <td>GOMEZ, Carleethia</td>
+                  <td>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#infoModalProv"
+                      title="Info"
+                      ><i
+                        class="operations fas fa-info-circle text-primary ml-2"
+                        style="font-size: 40px;"
+                      ></i
+                    ></a>
+                  </td>
+                  <td class="operations">
+                    <a href="#" data-toggle="modal"
+                    data-target="#editModalProv" title="Editar"
+                      ><i class="fas fa-pen-square fa-3x text-success"></i
+                    ></a>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#deleteModal"
+                      title="Borrar"
+                      ><i class="fas fa-minus-square fa-3x text-danger ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">236346326</th>
+                  <td>PEREZ, Elliot</td>
+                  <td>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#infoModal"
+                      title="Info"
+                      ><i
+                        class="operations fas fa-info-circle text-primary ml-2"
+                        style="font-size: 40px;"
+                      ></i
+                    ></a>
+                  </td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-pen-square fa-3x text-success"></i
+                    ></a>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#deleteModal"
+                      title="Borrar"
+                      ><i class="fas fa-minus-square fa-3x text-danger ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2135113463</th>
+                  <td>ESCOBAR, Josh</td>
+                  <td>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#infoModal"
+                      title="Info"
+                      ><i
+                        class="operations fas fa-info-circle text-primary ml-2"
+                        style="font-size: 40px;"
+                      ></i
+                    ></a>
+                  </td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-pen-square fa-3x text-success"></i
+                    ></a>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#deleteModal"
+                      title="Borrar"
+                      ><i class="fas fa-minus-square fa-3x text-danger ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">125123646</th>
+                  <td>SIMONS, Joe</td>
+                  <td>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#infoModal"
+                      title="Info"
+                      ><i
+                        class="operations fas fa-info-circle text-primary ml-2"
+                        style="font-size: 40px;"
+                      ></i
+                    ></a>
+                  </td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-pen-square fa-3x text-success"></i
+                    ></a>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#deleteModal"
+                      title="Borrar"
+                      ><i class="fas fa-minus-square fa-3x text-danger ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">62136436</th>
+                  <td>SANSON, Nick</td>
+                  <td>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#infoModal"
+                      title="Info"
+                      ><i
+                        class="operations fas fa-info-circle text-primary ml-2"
+                        style="font-size: 40px;"
+                      ></i
+                    ></a>
+                  </td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-pen-square fa-3x text-success"></i
+                    ></a>
+                    <a
+                      href="#"
+                      data-toggle="modal"
+                      data-target="#deleteModal"
+                      title="Borrar"
+                      ><i class="fas fa-minus-square fa-3x text-danger ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="form-row container col-12">
+              <ul class="pagination" style="margin-left: 190px;">
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#"
+                    >Siguiente Página</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-------Reportes------->
     <div id="reportes">
       <div id="tipoReporte">
@@ -532,6 +781,8 @@
           >
             <option selected>Productos Producidos</option>
             <option>Stock Materiales</option>
+            <option >Clientes</option>
+            <option>Proveedores</option>
           </select>
         </div>
 
@@ -981,9 +1232,9 @@
        <div style="margin-top: 30px;">
         <label for="inputState" class="text-center text-dark" >PROVEEDOR</label>
         <select id="inputState" class="form-control">
-          <option selected>PVS corp</option>
-          <option>PS corp</option>
-          <option>PET corp</option>
+          <option selected>PROVEEDOR corp</option>
+          <option>PROVEEDOR corp</option>
+          <option>PROVEEDOR corp</option>
         </select>
        </div>
      </div>

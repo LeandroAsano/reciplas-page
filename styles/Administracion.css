@@ -123,6 +123,20 @@ div#TablaProductos{
     display: none;
 }
 
+/*  CLIENTES  */
+
+#clientes {
+    display: none;
+  }
+  
+  #addButton {
+    position: absolute;
+    margin-left: 120px;
+    padding-bottom: 3px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
 /* REPORTES */
 
 #reportes{
