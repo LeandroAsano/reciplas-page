@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Arimo&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+h1 {
+  padding: 30px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Anton", sans-serif;
+}
+
+label {
+  font-size: 20px;
+  width: auto;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+}
+
+#body {
+  margin-top: 30px;
+  margin-left: 100px;
+  width: 90%;
+  height: 750px;
+  border-radius: 2 0px;
+  background-color: rgba(104, 104, 104, 0.842);
+}
+
+/*  CLIENTES  */
+
+#clientes {
+  display: block;
+}
+
+#addButton {
+  position: absolute;
+  margin-left: 120px;
+  padding-bottom: 3px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+/* REPORTES */
+
+#reportes {
+  display: none;
+}
+
+#tipoReporte {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.table {
+  margin-top: 10px;
+}
+
+#TablaProductosSemana {
+  display: none;
+}
+
+#TablaProductosMes {
+  display: none;
+}
+
+#TablaProductosAño {
+  display: block;
+}
+
+.pagination {
+  margin-left: 130px;
+}
+
+/* MODALS */
+
+div.modal-body label{
+    color: rgb(29, 29, 29);
+}
