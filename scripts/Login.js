@@ -12,5 +12,8 @@ function loginUser() {
     case "Administracion":
       loginButton.setAttribute("href", "../view/Administracion.html");
       break;
+    case "Clientes":
+      loginButton.setAttribute("href", "../view/Clientes.html");
+      break;
   }
 }
