@@ -86,9 +86,13 @@ div#body{
     margin-left: 200px;
 }
 
-/* CONSULTAR STOCK */
+/* CONSULTAR STOCK PRODUCTOS*/
 
-#consultarStock{
+#tipoStockProd{
+    margin-left: 140px;
+}
+
+#consultarStockProd{
     display: none;
 }
 
@@ -106,6 +110,17 @@ div#TablaProductos{
 
 #searchBox select{
     width: 360px;
+}
+
+/* CONSULTAR STOCK MATERIALES*/
+
+#tipoStock{
+    margin-left: 140px;
+    margin-bottom: 30px;
+}
+
+#consultarStockMateriales{
+    display: none;
 }
 
 /* REPORTES */
