@@ -17,7 +17,7 @@ label{
     font-family: 'Poppins', sans-serif;
 }
 
-div#body{
+#body{
     margin-top: 30px;
     margin-left: 100px;
     width: 1420px;
@@ -27,7 +27,7 @@ div#body{
 
 /* INGRESAR PRODUCTO */
 
-div#body{
+#body{
     margin-top: 30px;
     margin-left: 100px;
     width: 1420px;

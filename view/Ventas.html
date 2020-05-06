@@ -50,7 +50,12 @@
         <p>Sotelo, Carolina</p>
         <ul>
           <li>
-            <a onclick="selectTab(this)" class="selected book" href="#"
+            <a onclick="selectTab(this)" class="tab selected sell ventas" href="#"
+              ><i class="fas fa-dollar-sign"></i> Gestiónar Ventas</a
+            >
+          </li>
+          <li>
+            <a onclick="selectTab(this)" class="tab noSelected book reportes" href="#"
               ><i class="fas fa-book fa-lg"></i> Emitir Reportes</a
             >
           </li>
@@ -80,7 +85,11 @@
         />
         <ul>
           <li>
-            <a onclick="selectItem(this)" class="selected book" href="#"
+            <a onclick="selectItem(this)" class="tab selected sell ventas" href="#"
+              ><i class="fas fa-dollar-sign"></i></a>
+          </li>
+          <li>
+            <a onclick="selectItem(this)" class="tab noSelected book reportes" href="#"
               ><i class="fas fa-book fa-lg"></i
             ></a>
           </li>
@@ -93,494 +102,473 @@
       </div>
     </div>
 
-    <!-------Reportes------->
-    <div id="container">
-      <div id="tipoReporte">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-success active">
-            <input
-              onclick="showTable(this)"
-              class="TablaProductosAño"
-              type="radio"
-              name="options"
-              id="option1"
-              autocomplete="off"
-              checked
-            />
-            AÑO
-          </label>
-          <label class="btn btn-success">
-            <input
-              onclick="showTable(this)"
-              class="TablaProductosMes"
-              type="radio"
-              name="options"
-              id="option2"
-              autocomplete="off"
-            />
-            MES
-          </label>
-          <label class="btn btn-success">
-            <input
-              onclick="showTable(this)"
-              class="TablaProductosSemana"
-              type="radio"
-              name="options"
-              id="option3"
-              autocomplete="off"
-            />
-            SEMANA
-          </label>
-        </div>
+    
+    <div id="body">
+
+
+      <!-------------------------------VENTAS----------------------------->
+      <div id="ventas">
+
       </div>
 
-      <div id="reporteMes">
-        <h1>EMITIR REPORTES</h1>
-
-        <div class="form-row">
-          <label style="margin-left: 110px;">INICIO</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="..."
-            style="width: auto; margin-left: 10px;"
-          />
-
-          <label style="margin-left: 30px;">FIN</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="..."
-            style="width: auto; margin-left: 10px;"
-          />
-
-          <label
-            for="inputState"
-            style="position: absolute; margin-left: 800px;"
-            >TIPO REPORTE</label
-          >
-          <select
-            id="inputState"
-            class="form-control"
-            style="width: 20%; position: absolute; margin-left: 950px;"
-          >
-            <option selected>Productos Producidos</option>
-            <option>Materiales Utilizados</option>
-            <option>Compras Efectuadas</option>
-            <option>Ventas Realizadas</option>
-          </select>
-        </div>
-
-        <!-------------TABLA SEMANA-------------->
-        <div id="TablaProductosSemana" class="tabla">
-          <table
-            class="table table-hover rounded container table-dark text-center"
-          >
-            <thead>
-              <tr>
-                <th scope="col">Semana</th>
-                <th scope="col">Mes</th>
-                <th scope="col">Año</th>
-                <th scope="col">Opciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="col">SEMANA 4</th>
-                <th scope="row">ABR</th>
-                <td>2020</td>
-                <td class="operations">
-                  <a
-                    href="#"
-                    title="Editar"
-                    data-toggle="modal"
-                    data-target="#editModal"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="col">SEMANA 3</th>
-                <th scope="row">ABR</th>
-                <td>2020</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="col">SEMANA 2</th>
-                <th scope="row">ABR</th>
-                <td>2020</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="col">SEMANA 1</th>
-                <th scope="row">ABR</th>
-                <td>2020</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="col">SEMANA 4</th>
-                <th scope="row">MAR</th>
-                <td>2019</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="col">SEMANA 3</th>
-                <th scope="row">MAR</th>
-                <td>2019</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="form-row container col-12">
-            <ul class="pagination" style="margin-left: 190px;">
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#">1</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#">3</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#"
-                  >Siguiente Página</a
-                >
-              </li>
-            </ul>
+      <!------------------------------REPORTES--------------------------->
+      <div id="reportes">
+        <div id="tipoReporte">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-success active">
+              <input
+                onclick="showTable(this)"
+                class="TablaProductosAño"
+                type="radio"
+                name="options"
+                id="option1"
+                autocomplete="off"
+                checked
+              />
+              AÑO
+            </label>
+            <label class="btn btn-success">
+              <input
+                onclick="showTable(this)"
+                class="TablaProductosMes"
+                type="radio"
+                name="options"
+                id="option2"
+                autocomplete="off"
+              />
+              MES
+            </label>
+            <label class="btn btn-success">
+              <input
+                onclick="showTable(this)"
+                class="TablaProductosSemana"
+                type="radio"
+                name="options"
+                id="option3"
+                autocomplete="off"
+              />
+              SEMANA
+            </label>
           </div>
         </div>
 
-        <!-------------TABLA MES-------------->
-        <div id="TablaProductosMes" class="tabla">
-          <table
-            class="table table-hover rounded container table-dark text-center"
-          >
-            <thead>
-              <tr>
-                <th scope="col">Periodo</th>
-                <th scope="col">Año</th>
-                <th scope="col">Opciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">ABR-MAY</th>
-                <td>2020</td>
-                <td class="operations">
-                  <a
-                    href="#"
-                    title="Editar"
-                    data-toggle="modal"
-                    data-target="#editModal"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">MAR-ABR</th>
-                <td>2020</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">FEB-MAR</th>
-                <td>2020</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">ENE-FEB</th>
-                <td>2020</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">DIC-ENE</th>
-                <td>2019</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">NOV-DIC</th>
-                <td>2019</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="form-row container col-12">
-            <ul class="pagination" style="margin-left: 90px;">
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#">1</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#">3</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#"
-                  >Siguiente Página</a
-                >
-              </li>
-            </ul>
+        <div id="reporteMes">
+          <h1>EMITIR REPORTES</h1>
+
+          <div class="form-row">
+            <label style="margin-left: 110px;">INICIO</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="..."
+              style="width: auto; margin-left: 10px;"
+            />
+
+            <label style="margin-left: 30px;">FIN</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="..."
+              style="width: auto; margin-left: 10px;"
+            />
+
+            <label
+              for="inputState"
+              style="position: absolute; margin-left: 800px;"
+              >TIPO REPORTE</label
+            >
+            <select
+              id="inputState"
+              class="form-control"
+              style="width: 20%; position: absolute; margin-left: 950px;"
+            >
+              <option selected>Clientes</option>
+              <option>Proveedores</option>
+            </select>
           </div>
-        </div>
 
-        <!-------------TABLA AÑO-------------->
-        <div id="TablaProductosAño" class="tabla">
-          <table
-            class="table table-hover rounded container table-dark text-center"
-          >
-            <thead>
-              <tr>
-                <th scope="col">Año</th>
-                <th scope="col">Opciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2020</td>
-                <td class="operations">
-                  <a
-                    href="#"
-                    title="Editar"
-                    data-toggle="modal"
-                    data-target="#editModal"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <td>2019</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <td>2018</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <td>2017</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <td>2016</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-              <tr>
-                <td>2015</td>
-                <td class="operations">
-                  <a href="#" title="Editar"
-                    ><i class="fas fa-print fa-2x text-white"></i
-                  ></a>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#deleteModal"
-                    title="Borrar"
-                    ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
-                  ></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <!-------------TABLA SEMANA-------------->
+          <div id="TablaProductosSemana" class="tabla">
+            <table
+              class="table table-hover rounded container table-dark text-center"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">Semana</th>
+                  <th scope="col">Mes</th>
+                  <th scope="col">Año</th>
+                  <th scope="col">Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="col">SEMANA 4</th>
+                  <th scope="row">ABR</th>
+                  <td>2020</td>
+                  <td class="operations">
+                    <a
+                      href="#"
+                      title="Editar"
+                      data-toggle="modal"
+                      data-target="#editModal"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="col">SEMANA 3</th>
+                  <th scope="row">ABR</th>
+                  <td>2020</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="col">SEMANA 2</th>
+                  <th scope="row">ABR</th>
+                  <td>2020</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="col">SEMANA 1</th>
+                  <th scope="row">ABR</th>
+                  <td>2020</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="col">SEMANA 4</th>
+                  <th scope="row">MAR</th>
+                  <td>2019</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="col">SEMANA 3</th>
+                  <th scope="row">MAR</th>
+                  <td>2019</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="form-row container col-12">
+              <ul class="pagination" style="margin-left: 115px;">
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#"
+                    >Siguiente Página</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
 
-          <div class="form-row container col-12">
-            <ul class="pagination" style="margin-left: 90px;">
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#">1</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#">3</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link bg-dark border-dark" href="#"
-                  >Siguiente Página</a
-                >
-              </li>
-            </ul>
+          <!-------------TABLA MES-------------->
+          <div id="TablaProductosMes" class="tabla">
+            <table
+              class="table table-hover rounded container table-dark text-center"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">Periodo</th>
+                  <th scope="col">Año</th>
+                  <th scope="col">Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">ABR-MAY</th>
+                  <td>2020</td>
+                  <td class="operations">
+                    <a
+                      href="#"
+                      title="Editar"
+                      data-toggle="modal"
+                      data-target="#editModal"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">MAR-ABR</th>
+                  <td>2020</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">FEB-MAR</th>
+                  <td>2020</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">ENE-FEB</th>
+                  <td>2020</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">DIC-ENE</th>
+                  <td>2019</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">NOV-DIC</th>
+                  <td>2019</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="form-row container col-12">
+              <ul class="pagination" style="margin-left: 115px;">
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#"
+                    >Siguiente Página</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-------------TABLA AÑO-------------->
+          <div id="TablaProductosAño" class="tabla">
+            <table
+              class="table table-hover rounded container table-dark text-center"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">Año</th>
+                  <th scope="col">Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2020</td>
+                  <td class="operations">
+                    <a
+                      href="#"
+                      title="Editar"
+                      data-toggle="modal"
+                      data-target="#editModal"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2019</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2018</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2017</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2016</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2015</td>
+                  <td class="operations">
+                    <a href="#" title="Editar"
+                      ><i class="fas fa-print fa-2x text-white"></i
+                    ></a>
+                    <a
+                      href="#"
+                      title="Borrar"
+                      ><i class="fas fa-folder-open fa-2x text-warning ml-2"></i
+                    ></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="form-row container col-12">
+              <ul class="pagination" style="margin-left: 115px;">
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link bg-dark border-dark" href="#"
+                    >Siguiente Página</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+
+
+
+
+
+
+
 
     </div>
 
-    <footer></footer>
 
     <!-----------------------------CUSTOM JS----------------------------->
     <script type="text/javascript" src="../scripts/Home.js"></script>
